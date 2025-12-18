@@ -1,0 +1,133 @@
+@import url('./variables.css');
+
+/* ===== PROFILE PAGE ===== */
+.profile_sec {
+  background-color: var(--bg-secondary);
+  padding: 3rem 1rem;
+  min-height: calc(100vh - 400px);
+}
+
+.profile {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-xl);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  border: 4px solid var(--border-light);
+  transition: all var(--transition-fast);
+  display: block;
+}
+
+.avatar:hover {
+  border-color: var(--primary);
+  transform: scale(1.05);
+}
+
+.avatar:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile_settings {
+  width: 100%;
+}
+
+.profile_settings a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+  gap: 1rem;
+}
+
+.profile_settings a:hover {
+  background-color: var(--bg-tertiary);
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateX(4px);
+}
+
+.profile_settings a:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-color: var(--primary);
+}
+
+.profile_settings img {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  opacity: 0.6;
+  transition: opacity var(--transition-fast);
+}
+
+.profile_settings a:hover img,
+.profile_settings a:focus img {
+  opacity: 1;
+}
+
+.profile_settings p {
+  margin: 0;
+  flex: 1;
+  text-align: left;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .profile_sec {
+    padding: 2rem 1rem;
+  }
+  
+  .profile {
+    padding: 1.5rem;
+    border-radius: var(--radius-xl);
+  }
+  
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile {
+    padding: 1rem;
+  }
+  
+  .profile_settings a {
+    padding: 0.875rem 1rem;
+    font-size: var(--font-size-sm);
+  }
+  
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+}

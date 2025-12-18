@@ -1,0 +1,108 @@
+@import url('./variables.css');
+@import url('./base.css');
+
+/* Skip link для доступности */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary);
+  color: var(--text-inverse);
+  padding: var(--spacing-sm) var(--spacing-md);
+  text-decoration: none;
+  z-index: 1000;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-medium);
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--text-primary);
+  margin: 0 0 0.5em 0;
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+}
+
+h5 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+}
+
+h6 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+}
+
+p {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary);
+  margin: 0 0 1em 0;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+a:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.margin {
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}

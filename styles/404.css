@@ -1,0 +1,98 @@
+@import url('./variables.css');
+
+/* ===== 404 PAGE ===== */
+body {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  min-height: 100vh;
+}
+
+.not_found {
+  width: 100%;
+  min-height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.not_found h1 {
+  font-size: 8rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--primary);
+  margin: 0 0 1rem 0;
+  line-height: 1;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.not_found p {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 0 2rem 0;
+  line-height: var(--line-height-relaxed);
+}
+
+.not_found .button_entry {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+  color: var(--text-inverse);
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-base), background var(--transition-fast);
+  margin-top: 1rem;
+  box-shadow: var(--shadow-md);
+}
+
+.not_found .button_entry:hover {
+  background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary) 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.not_found .button_entry:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.not_found .button_entry:active {
+  transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .not_found h1 {
+    font-size: 6rem;
+  }
+  
+  .not_found p {
+    font-size: var(--font-size-base);
+  }
+}
+
+@media (max-width: 480px) {
+  .not_found {
+    padding: 1rem;
+  }
+  
+  .not_found h1 {
+    font-size: 4rem;
+  }
+  
+  .not_found p {
+    font-size: var(--font-size-sm);
+  }
+  
+  .not_found .button_entry {
+    width: 100%;
+    max-width: 300px;
+  }
+}

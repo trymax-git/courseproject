@@ -1,0 +1,129 @@
+@import url("./variables.css");
+
+/* ===== ABOUT COMPANY PAGE ===== */
+.about_company_info {
+  background-color: var(--bg-secondary);
+  padding: 3rem 1rem;
+}
+
+.about_company_content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.full_logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.full_logo img {
+  max-width: 900px;
+  border-radius: 1em;
+  height: auto;
+  filter: drop-shadow(var(--shadow-md));
+}
+
+.about_information {
+  width: 100%;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  padding: 2rem;
+  transition: transform var(--transition-base),
+    box-shadow var(--transition-base), border-color var(--transition-fast);
+}
+
+.about_information:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+  border-color: var(--primary);
+}
+
+.about_information h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary);
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--border-light);
+}
+
+.about_information p {
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+  line-height: var(--line-height-relaxed);
+  margin: 0 0 1rem 0;
+}
+
+.about_information p:last-child {
+  margin-bottom: 0;
+}
+
+.adaptive {
+  display: block;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .about_company_info {
+    padding: 2rem 1rem;
+  }
+
+  .about_company_content {
+    gap: 2rem;
+  }
+
+  .full_logo {
+    padding: 1rem 0;
+  }
+
+  .full_logo img {
+    max-width: 200px;
+  }
+
+  .about_information {
+    padding: 1.5rem;
+  }
+
+  .about_information h1 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .about_information p {
+    font-size: var(--font-size-sm);
+  }
+
+  .adaptive {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .about_company_info {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .about_company_content {
+    gap: 1.5rem;
+  }
+
+  .full_logo img {
+    max-width: 150px;
+  }
+
+  .about_information {
+    padding: 1rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .about_information h1 {
+    font-size: var(--font-size-xl);
+  }
+}

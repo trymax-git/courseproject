@@ -1,0 +1,133 @@
+/**
+ * CSS переменные для проекта SAASUNG Shop
+ * Темная цветовая палитра с синими акцентами для e-commerce
+ * Импортируется во всех CSS файлах проекта
+ */
+
+:root {
+  /* ===== ОСНОВНЫЕ ЦВЕТА ===== */
+  
+  /* Фоны - темная тема */
+  --bg-primary: #0F172A;               /* Основной темно-синий фон (slate-900) */
+  --bg-secondary: #1E293B;             /* Вторичный темно-синий фон (slate-800) */
+  --bg-tertiary: #334155;             /* Третичный темно-серый фон (slate-700) */
+  --bg-card: #1E293B;                 /* Фон карточек (slate-800) */
+  --bg-hover: #334155;                /* Фон при наведении (slate-700) */
+  
+  /* Акцентные цвета - синяя палитра */
+  --primary: #3B82F6;                 /* Яркий синий для CTA и ссылок (blue-500) */
+  --primary-hover: #2563EB;           /* Темнее для hover (blue-600) */
+  --primary-light: #1E40AF;           /* Темно-синий для фонов (blue-800) */
+  --primary-dark: #1D4ED8;            /* Очень темно-синий (blue-700) */
+  --primary-glow: rgba(59, 130, 246, 0.3); /* Свечение синего */
+  
+  /* Текст - светлый на темном */
+  --text-primary: #F1F5F9;             /* Основной светлый текст (slate-100) */
+  --text-secondary: #CBD5E1;           /* Вторичный серый текст (slate-300) */
+  --text-tertiary: #94A3B8;           /* Третичный светлый текст (slate-400) */
+  --text-inverse: #0F172A;            /* Темный текст на светлом фоне */
+  --text-muted: #64748B;              /* Приглушенный текст (slate-500) */
+  
+  /* Границы */
+  --border-light: #334155;            /* Светло-серая граница (slate-700) */
+  --border-medium: #475569;           /* Средне-серая граница (slate-600) */
+  --border-dark: #64748B;             /* Темно-серая граница (slate-500) */
+  --border-primary: #3B82F6;         /* Синяя граница (blue-500) */
+  
+  /* Состояния */
+  --success: #10B981;                 /* Зеленый для успеха, акций (emerald-500) */
+  --success-light: #065F46;           /* Темно-зеленый фон (emerald-900) */
+  --error: #EF4444;                   /* Красный для ошибок (red-500) */
+  --error-light: #7F1D1D;             /* Темно-красный фон (red-900) */
+  --warning: #F59E0B;                 /* Оранжевый для предупреждений (amber-500) */
+  --warning-light: #78350F;           /* Темно-оранжевый фон (amber-900) */
+  --info: #3B82F6;                    /* Синий для информации (blue-500) */
+  --info-light: #1E3A8A;              /* Темно-синий фон (blue-900) */
+  
+  /* ===== ОБРАТНАЯ СОВМЕСТИМОСТЬ ===== */
+  /* Старые переменные маппятся на новые для плавного перехода */
+  --dark-blue-color: var(--bg-primary);
+  --blue-gray-color: var(--bg-secondary);
+  --sea-blue-color: var(--primary);
+  --light-gray-color: var(--bg-tertiary);
+  --white-color: var(--text-primary);
+  --black-color: var(--bg-primary);
+  --gray-color: var(--border-medium);
+  
+  --bright-blue-color: var(--primary);
+  --bright-lightblue-color: var(--primary-hover);
+  --bright-support-blue-color: var(--bg-secondary);
+  
+  /* ===== РАЗМЕРЫ И ОТСТУПЫ ===== */
+  --max-width: 1440px;
+  --container-padding: 1.5rem;
+  
+  /* Border radius */
+  --radius-sm: 0.375rem;              /* 6px */
+  --radius-md: 0.5rem;                /* 8px */
+  --radius-lg: 0.75rem;               /* 12px */
+  --radius-xl: 1rem;                  /* 16px */
+  --radius-2xl: 1.5rem;               /* 24px */
+  --radius-full: 9999px;
+  
+  /* ===== ТЕНИ ===== */
+  /* Тени для темной темы - более выраженные с синим свечением */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4), 0 0 20px rgba(59, 130, 246, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.5), 0 0 30px rgba(59, 130, 246, 0.15);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 40px rgba(59, 130, 246, 0.2);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.3);
+  
+  /* ===== ПЕРЕХОДЫ ===== */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-duration: 300ms;
+  --transition-duration-fast: 150ms;
+  
+  /* Специфичные переходы для разных свойств */
+  --transition-color: color var(--transition-fast);
+  --transition-transform: transform var(--transition-base);
+  --transition-opacity: opacity var(--transition-fast);
+  --transition-shadow: box-shadow var(--transition-base);
+  
+  /* ===== ТИПОГРАФИКА ===== */
+  --font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  
+  /* Размеры шрифтов */
+  --font-size-xs: 0.75rem;            /* 12px */
+  --font-size-sm: 0.875rem;           /* 14px */
+  --font-size-base: 1rem;             /* 16px */
+  --font-size-lg: 1.125rem;           /* 18px */
+  --font-size-xl: 1.25rem;            /* 20px */
+  --font-size-2xl: 1.5rem;            /* 24px */
+  --font-size-3xl: 1.875rem;         /* 30px */
+  --font-size-4xl: 2.25rem;          /* 36px */
+  
+  /* Веса шрифтов */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Высота строк */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* Межбуквенное расстояние */
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+  
+  /* ===== SPACING ===== */
+  --spacing-xs: 0.25rem;              /* 4px */
+  --spacing-sm: 0.5rem;               /* 8px */
+  --spacing-md: 1rem;                 /* 16px */
+  --spacing-lg: 1.5rem;               /* 24px */
+  --spacing-xl: 2rem;                 /* 32px */
+  --spacing-2xl: 3rem;                /* 48px */
+  --spacing-3xl: 4rem;                /* 64px */
+}
