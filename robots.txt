@@ -3,4 +3,5 @@ Allow: /
 Disallow: /admin_panel.html
 Disallow: /yandex_c2b0e4ff22bf9af0.html
 
-Sitemap: https://ваш-домен.ру/sitemap.xml
+
+Sitemap: https://trymax-git.github.io/courseproject/
