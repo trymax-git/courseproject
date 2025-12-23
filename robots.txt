@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin_panel.html
+Disallow: /yandex_c2b0e4ff22bf9af0.html
+
+Sitemap: https://ваш-домен.ру/sitemap.xml
