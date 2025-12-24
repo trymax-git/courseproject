@@ -1,7 +1,9 @@
 User-agent: *
 Allow: /
 Disallow: /admin_panel.html
-Disallow: /yandex_c2b0e4ff22bf9af0.html
 
+Allow: /google8cf3713c69fddf77.html
+Allow: /yandex_c2b0e4ff22bf9af0.html
 
 Sitemap: https://trymax-git.github.io/courseproject/
+
