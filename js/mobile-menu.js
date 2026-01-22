@@ -15,7 +15,7 @@
       toggle.setAttribute('aria-expanded', !isExpanded);
       nav.classList.toggle('active');
       
-      // Блокируем скролл body когда меню открыто
+      // блокировка скролл body когда меню открыто
       if (!isExpanded) {
         document.body.style.overflow = 'hidden';
       } else {
@@ -23,7 +23,7 @@
       }
     });
 
-    // Закрываем меню при клике на ссылку
+    // закрытие меню при клике на ссылку
     const navLinks = nav.querySelectorAll('a');
     navLinks.forEach(link => {
       link.addEventListener('click', function() {
@@ -35,7 +35,7 @@
       });
     });
 
-    // Закрываем меню при клике вне его
+    // закрытие меню при клике вне его
     document.addEventListener('click', function(e) {
       if (window.innerWidth <= 768 && nav.classList.contains('active')) {
         if (!nav.contains(e.target) && !toggle.contains(e.target)) {
@@ -47,7 +47,7 @@
     });
   }
 
-  // Инициализация при загрузке DOM
+  // инициализация при загрузке DOM
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initMobileMenu);
   } else {
