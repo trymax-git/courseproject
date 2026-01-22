@@ -16,17 +16,16 @@
       const html = await response.text();
       targetElement.innerHTML = html;
       
-      // Исправляем пути в загруженном компоненте относительно текущей страницы
+      // пути в загруженном компоненте относительно текущей страницы
       fixRelativePaths(targetElement);
       
-      // Уведомляем другие скрипты о загрузке компонента
       const event = new CustomEvent('componentLoaded', { 
         detail: { component: componentPath, element: targetElement } 
       });
       document.dispatchEvent(event);
     } catch (error) {
       console.error(`Error loading component ${componentPath}:`, error);
-      // Показываем сообщение об ошибке в production, но не ломаем страницу
+      // показывается сообщение об ошибке в production, но не ломается страница
       if (targetElement) {
         targetElement.innerHTML = `<!-- Ошибка загрузки компонента: ${componentPath} -->`;
       }
